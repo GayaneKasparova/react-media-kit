@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "esnext",              // ✅ Needed for import.meta
+    "target": "es2020",
+    "moduleResolution": "bundler",   // works better with Vite/Vitest
+    "esModuleInterop": true,         // optional: allows default import of CJS modules
+    "types": ["vitest", "@testing-library/jest-dom"],
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+}
